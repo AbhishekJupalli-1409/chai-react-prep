@@ -7,10 +7,12 @@ function App() {
   const [count, setCount] = useState(0)
   const Increment = (e)=>{
     
-    console.log(e);
-     setCount(count + 1);
-     setCount(count + 1);
-     setCount(count + 1); 
+    
+    setCount(prevCounter => prevCounter + 1)
+    setCount(prevCounter => prevCounter + 1 )
+    console.log(count);
+    //  setCount(count + 1);
+    //  setCount(count + 1); 
 
   }
   // var count2 = 0;
