@@ -4,8 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [color, setColor] = useState("black")
-
+  const [color, ] = useState("black")
+setColor
   const handleColor = (e)=>{
     console.log(e)
     setColor(e);
