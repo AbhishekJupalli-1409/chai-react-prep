@@ -4,6 +4,9 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Todo from './Components/Todo'
 import { nanoid } from 'nanoid'
+import ClickSpark from './Components/ClickSpark'
+
+
 
 
 function App() {
@@ -57,7 +60,13 @@ function App() {
 
   return (
     <>
-
+      <ClickSpark
+        sparkColor='#fff'
+        sparkSize={13}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
       <div className='h-screen flex flex-col items-center justify-center gap-5 '>
         <h1 className='text-2xl font-semibold'>My Todos List</h1>
       <form  className='flex w-full justify-center gap-3 rounded-lg ' onSubmit={handleTodos}>
@@ -65,9 +74,10 @@ function App() {
         <button className='bg-indigo-500 cursor-pointer px-3  rounded-lg' >Add</button>
       </form>
       
-      <Todo className="mt-4" todos={todos} setTodos={setTodos} strike={strike} setStrike={setStrike}/>
+      <Todo className="mt-4" todos={todos} setTodos={setTodos} strike={strike} setStrike={setStrike} />
       
       </div>
+      </ClickSpark>
     </>
   )
 }
